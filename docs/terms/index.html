@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Volemos Travel LLC — Terms of Use" />
+  <title>Volemos Travel — Terms of Use</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #111827;
+      --muted: #6b7280;
+      --card: #f8fafc;
+      --border: #e5e7eb;
+      --link: #0b5fff;
+      --max: 980px;
+      --toc: 280px;
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1220;
+        --fg: #e5e7eb;
+        --muted: #9ca3af;
+        --card: #0f1930;
+        --border: #22304b;
+        --link: #7aa7ff;
+      }
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(127,127,127,0.10), rgba(127,127,127,0.00));
+    }
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px;
+    }
+    .title { display: grid; gap: 8px; }
+    h1 {
+      font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .meta { color: var(--muted); font-size: 0.95rem; }
+
+    .layout {
+      max-width: calc(var(--max) + var(--toc));
+      margin: 0 auto;
+      padding: 18px;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 980px) {
+      .layout {
+        grid-template-columns: var(--toc) 1fr;
+        align-items: start;
+      }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    nav .toc-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    nav .toc-title strong {
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    nav ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      display: grid;
+      gap: 6px;
+    }
+    nav li ul {
+      margin-top: 6px;
+      margin-left: 12px;
+      padding-left: 12px;
+      border-left: 1px solid var(--border);
+      gap: 4px;
+    }
+    nav a {
+      display: inline-block;
+      padding: 6px 8px;
+      border-radius: 10px;
+    }
+    nav a:hover {
+      background: rgba(127,127,127,0.12);
+      text-decoration: none;
+    }
+
+    .prose { padding: 18px 18px 6px; }
+    .prose p { margin: 0 0 12px 0; }
+    .prose .section { padding-top: 4px; }
+
+    .prose h2 {
+      margin: 22px 0 10px 0;
+      font-size: 1.35rem;
+      letter-spacing: -0.01em;
+    }
+    .prose h3 { margin: 18px 0 8px 0; font-size: 1.15rem; }
+    .prose h4 { margin: 14px 0 6px 0; font-size: 1.02rem; }
+
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(127,127,127,0.10);
+      color: var(--fg);
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    .btn:hover { background: rgba(127,127,127,0.16); }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 10px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 22px;
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 18px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    @media print {
+      nav, .top-actions, .note { display: none !important; }
+      body { background: #fff; color: #000; }
+      a { color: #000; text-decoration: none; }
+      .layout { display: block; padding: 0; }
+      .card { border: none; padding: 0; }
+      header { border: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap title">
+      <h1>Terms of Use</h1>
+      <div class="meta">Last revised: 03-JAN-2026</div>
+      <div class="top-actions" role="group" aria-label="Page actions">
+        <button class="btn" onclick="window.print()" type="button" aria-label="Print this page">Print</button>
+        <a class="btn" href="#top" aria-label="Jump to the top">Back to top</a>
+      </div>
+      <div class="note">This page is published for convenience. If you received a PDF or signed document version, that version controls in the event of any conflict.</div>
+    </div>
+  </header>
+
+  <a id="top" href="#" style="position:absolute;top:0;left:0;opacity:0;">Top</a>
+
+  <div class="layout">
+    <nav class="card" aria-label="Table of contents">
+      <div class="toc-title"><strong>Contents</strong></div>
+      <ul>
+        <li><a href="#our-role-and-suppliers">Our Role and Suppliers</a></li>
+        <li><a href="#quotes-prices-and-availability">Quotes, Prices, and Availability</a></li>
+        <li><a href="#booking-payments-and-deadlines">Booking, Payments, and Deadlines</a></li>
+        <li><a href="#custom-quote-and-professional-services">Custom Quote AND Professional services</a>
+          <ul>
+            <li><a href="#changes-to-the-quote">Changes to the Quote</a></li>
+            <li><a href="#credit-towards-booking">Credit Towards Booking</a></li>
+            <li><a href="#non-refundable-nature-of-the-fee">Non-Refundable Nature of the Fee</a></li>
+            <li><a href="#no-price-guarantee">No Price Guarantee</a></li>
+          </ul>
+        </li>
+        <li><a href="#professional-service-fees">Professional Service Fees</a>
+          <ul>
+            <li><a href="#flight-only-bookings">Flight-Only Bookings</a></li>
+            <li><a href="#travel-packages">Travel Packages</a></li>
+          </ul>
+        </li>
+        <li><a href="#changes-cancellations-and-refunds">Changes, Cancellations, and Refunds</a>
+          <ul>
+            <li><a href="#customer-requested-changes-and-cancellations">Customer-Requested Changes and Cancellations</a></li>
+            <li><a href="#supplier-initiated-changes-and-cancellations">Supplier-Initiated Changes and Cancellations</a></li>
+            <li><a href="#refunds-and-travel-credits">Refunds and Travel Credits</a></li>
+            <li><a href="#travel-insurance-strongly-recommended">Travel Insurance Strongly Recommended</a></li>
+          </ul>
+        </li>
+        <li><a href="#california-consumer-disclosures">CALIFORNIA CONSUMER DISCLOSURES</a>
+          <ul>
+            <li><a href="#california-seller-of-travel">California Seller of Travel</a></li>
+            <li><a href="#right-to-prompt-refund-in-the-event-of-a-cancellation">Right to prompt refund in the event of a cancellation</a></li>
+            <li><a href="#california-travel-consumer-restitution-fund-tcrf">California Travel Consumer Restitution Fund (TCRF)</a></li>
+          </ul>
+        </li>
+        <li><a href="#user-conduct">USER CONDUCT</a></li>
+        <li><a href="#intellectual-property">INTELLECTUAL PROPERTY</a></li>
+        <li><a href="#dispute-resolution-and-limitation-of-liability">DISPUTE RESOLUTION AND LIMITATION OF LIABILITY</a></li>
+        <li><a href="#indemnification">INDEMNIFICATION</a></li>
+        <li><a href="#updates-and-modifications">UPDATES AND MODIFICATIONS</a></li>
+        <li><a href="#no-third-party-beneficiaries">NO THIRD-PARTY BENEFICIARIES</a></li>
+        <li><a href="#waiver">WAIVER</a></li>
+        <li><a href="#entire-agreement">ENTIRE AGREEMENT</a></li>
+        <li><a href="#severability">SEVERABILITY</a></li>
+        <li><a href="#contact-information">CONTACT INFORMATION</a></li>
+      </ul>
+    </nav>
+
+    <main class="card" role="main">
+      <article class="prose">
+        <p>Volemos Travel LLC (“Volemos Travel,” “Volemos,” “we,” “us,” or “our”) is a California limited liability company that provides travel-related planning and booking services.</p>
+        <p>These Terms of Use (“Terms”) govern your use of our services, including requesting information, quotes, planning, scheduling travel, booking travel services, and making payments to us or at our direction.</p>
+        <p>By using our services in any manner, you confirm that you have read, understood, and agree to these Terms, as well as any additional terms provided by applicable travel suppliers or in connection with your specific booking.</p>
+
+        <section id="our-role-and-suppliers" class="section level-1">
+          <h2>Our Role and Suppliers</h2>
+          <p>We work with independent third-party travel providers, including airlines, hotels, tour operators, cruise lines, and car rental companies (collectively, “Suppliers”).</p>
+          <p>Suppliers are independent contractors and are solely responsible for providing their travel services. We act only as an intermediary and booking agent and do not own, operate, manage, or control any Supplier services.</p>
+          <p>We are not responsible for the acts, omissions, delays, cancellations, or failures of any Supplier, including injury, loss, property damage, schedule changes, or service disruptions. All refunds, credits, or remedies related to Supplier services are governed exclusively by the applicable Supplier’s terms and conditions.</p>
+          <p>By using our services, you agree that any claims related to Supplier services must be directed to the applicable Supplier, and you release Volemos Travel LLC from liability to the fullest extent permitted by law.</p>
+        </section>
+
+        <section id="quotes-prices-and-availability" class="section level-1">
+          <h2>Quotes, Prices, and Availability</h2>
+          <p>All quotes, proposals, and trip information are provided for informational purposes only and do not constitute a binding offer. Prices and availability are subject to change until a reservation is confirmed and booked.</p>
+          <p>Quoted prices are based on information provided by Suppliers at the time of quoting. While we make reasonable efforts to disclose known costs in advance, certain charges may not be included or may change after booking, including resort fees, destination fees, local taxes, or charges payable directly to the Supplier or at the destination.</p>
+          <p>Images, descriptions, and itinerary details are provided for reference only and may differ from the Supplier’s actual offering. You are responsible for reviewing all quotes and confirmations carefully before authorizing a booking.</p>
+        </section>
+
+        <section id="booking-payments-and-deadlines" class="section level-1">
+          <h2>Booking, Payments, and Deadlines</h2>
+          <p>By requesting, authorizing, or completing a reservation, deposit, or payment with us, you authorize us to arrange travel services on your behalf and agree to these Terms and the applicable Supplier’s terms and conditions.</p>
+          <p>Accepted payment methods may include credit card, bank transfer, cash, or approved electronic payment services, depending on the booking. All payments must be made in U.S. dollars (USD), unless expressly stated otherwise in writing.</p>
+          <p>Online payments made using non-U.S.–issued credit cards are subject to an additional non-refundable processing fee of 1.5%, which reflects increased transaction and payment processing costs. This fee is separate from travel services and not applied toward the cost of travel.</p>
+          <p>Deposit amounts and final payment deadlines are determined by the applicable Supplier and itinerary. Payment deadlines will be clearly stated on your invoice or booking confirmation and are binding.</p>
+          <p>Failure to make any payment by the stated due date may result in cancellation, repricing, or penalties imposed by the Supplier. Late or missed payments may also result in a flat, non-refundable administrative fee of $95 charged by us, which is earned upon assessment, separate from travel services, and not applied toward the cost of travel, in addition to any Supplier penalties or costs.</p>
+          <p>We are not responsible for any losses resulting from missed or late payments. Once a booking is confirmed, prices, availability, and terms are controlled by the Supplier and may not be changeable or refundable.</p>
+        </section>
+
+        <section id="custom-quote-and-professional-services" class="section level-1">
+          <h2>Custom Quote AND Professional services</h2>
+          <p>We offer a custom quote and professional planning service for private, personalized trips. This service includes research, itinerary design, professional travel advice, and reasonable adjustments based on your preferences.</p>
+          <p>The cost of this custom quote service is $75 per trip, which will be clearly disclosed before payment.</p>
+          <p>This service compensates us for professional time and work performed prior to booking and is separate from travel services provided by Suppliers. Custom quote services are provided regardless of whether you ultimately book travel through us.</p>
+
+          <section id="changes-to-the-quote" class="section level-2">
+            <h3>Changes to the Quote</h3>
+            <p>Minor adjustments to a quote are included. Major changes—such as changing the destination or rebuilding the itinerary in full—are considered a new custom quote and may require an additional fee.</p>
+          </section>
+
+          <section id="credit-towards-booking" class="section level-2">
+            <h3>Credit Towards Booking</h3>
+            <p>If you choose to book your trip with us within thirty (30) days of receiving your custom quote, the $75 custom quote service fee will be credited toward the applicable Professional Service Fee, as described in Section V.</p>
+          </section>
+
+          <section id="non-refundable-nature-of-the-fee" class="section level-2">
+            <h3>Non-Refundable Nature of the Fee</h3>
+            <p>If you do not proceed with a booking, the custom quote service fee is non-refundable, as it covers the time and work invested in creating a personalized proposal.</p>
+          </section>
+
+          <section id="no-price-guarantee" class="section level-2">
+            <h3>No Price Guarantee</h3>
+            <p>Prices provided in a custom quote are not guaranteed until the reservation is confirmed and booked and may change based on availability and Supplier pricing.</p>
+          </section>
+        </section>
+
+        <section id="professional-service-fees" class="section level-1">
+          <h2>Professional Service Fees</h2>
+          <p>In addition to any custom quote services described in Section IV, we charge professional service fees for planning, coordination, booking, and advisory services. These fees are separate from travel services provided by Suppliers.</p>
+
+          <section id="flight-only-bookings" class="section level-2">
+            <h3>Flight-Only Bookings</h3>
+            <p>For bookings that include airfare only, a professional service fee applies per person, per flight segment, based on the cabin class booked.</p>
+            <p>For purposes of these Terms, a flight segment is defined as a one-way journey between an origin city and a destination city, regardless of the number of connections, layovers, or flight numbers involved. By way of example, a one-way ticket is considered one (1) flight segment, while a round-trip itinerary consists of two (2) flight segments.</p>
+            <p>Professional service fees for flight-only bookings are as follows:</p>
+            <p>$25 per person, per segment for Economy Class tickets</p>
+            <p>$50 per person, per segment for Business Class tickets</p>
+            <p>$100 per person, per segment for First Class tickets</p>
+            <p>These fees compensate us for booking, ticketing, fare review, schedule monitoring, and related professional services and are separate from airfare and Supplier charges.</p>
+            <p>Professional service fees for flight-only bookings are earned upon receipt and are non-refundable under all circumstances, regardless of ticket changes, cancellations, or Supplier actions.</p>
+          </section>
+
+          <section id="travel-packages" class="section level-2">
+            <h3>Travel Packages</h3>
+            <p>For bookings that include multiple travel components, professional service fees are calculated per person as follows:</p>
+            <p>$150 per person for travel within the United States (all 50 states) and Mexico</p>
+            <p>$250 per person for travel to the rest of the world</p>
+            <p>For trips with five (5) or more travelers, an additional $50 per person applies due to increased planning and coordination.</p>
+            <p>For bundled trips and packages, the price presented reflects a total, all-inclusive price, which includes our professional service fees and all known travel costs at the time of quoting. We do not itemize individual components unless required by law or, at our sole discretion, upon express request.</p>
+
+            <section id="application-of-custom-quote-fee" class="section level-3">
+              <h4>Application of Custom Quote Fee</h4>
+              <p>If applicable, any custom quote service fee paid under Section IV will be credited toward the Professional Service Fee for the same trip, provided the booking is confirmed within the timeframe stated in that section.</p>
+            </section>
+
+            <section id="non-refundable-nature-of-the-fees" class="section level-3">
+              <h4>Non-Refundable Nature of the Fees</h4>
+              <p>Professional service fees are earned upon receipt, are not applied toward the cost of travel services, and are non-refundable under all circumstances, regardless of trip outcome, cancellation, or Supplier actions.</p>
+              <p>Professional service fees may be collected in installments; however, the full fee is earned upon receipt of the initial payment and remains non-refundable in its entirety, regardless of whether the full trip balance is paid.</p>
+            </section>
+
+            <section id="discretionary-collection" class="section level-3">
+              <h4>Discretionary Collection</h4>
+              <p>We reserve the right to invoice and collect any unpaid portion of the professional service fees; however, we may, in our sole discretion, elect not to pursue collection in certain circumstances.</p>
+            </section>
+          </section>
+        </section>
+
+        <section id="changes-cancellations-and-refunds" class="section level-1">
+          <h2>Changes, Cancellations, and Refunds</h2>
+          <p>All changes and cancellations are subject to the terms, conditions, deadlines, and penalties imposed by the travel suppliers providing the services (“Suppliers”). Supplier policies may be restrictive and may result in penalties of up to 100% of the booking cost. We do not control Supplier rules, decisions, or refund timelines.</p>
+          <p>Any administrative, processing, or handling fees charged under this Section 6 are fees charged by Volemos Travel for its own services, are separate from travel services provided by Suppliers, and are not applied toward the cost of travel. Such fees are earned by Volemos Travel when assessed and are non-refundable once charged, regardless of trip outcome or Supplier actions</p>
+
+          <section id="customer-requested-changes-and-cancellations" class="section level-2">
+            <h3>Customer-Requested Changes and Cancellations</h3>
+
+            <section id="changes" class="section level-3">
+              <h4>Changes</h4>
+              <p>Minor and reasonable adjustments to a booking may be provided at no additional charge, at our discretion.</p>
+              <p>Substantial changes—such as changes that require reworking the itinerary, repricing components, changing destinations, or rebooking services—may result in a non-refundable administrative fee of $50 per person charged by Volemos Travel. This fee compensates us for additional planning, coordination, and handling work and is separate from any Supplier-imposed fees or penalties.</p>
+              <p>Any applicable change-related fees charged by Volemos Travel will be clearly disclosed and approved by you before the change is processed.</p>
+            </section>
+
+            <section id="cancellations" class="section level-3">
+              <h4>Cancellations</h4>
+              <p>In the event of a cancellation requested by you, Volemos Travel may retain non-refundable administrative fees, calculated solely on the amounts paid to date at the time of cancellation, as follows:</p>
+              <p>5% Administrative and Payment Processing Fee, retained to offset non-recoverable transaction, payment processing, and operational costs; and</p>
+              <p>7% Planning and Cancellation Handling Fee, retained to cover time spent on planning, coordination, communications, and cancellation management.</p>
+              <p>These fees are separate from and in addition to any Supplier fees or penalties and apply regardless of the reason for cancellation.</p>
+            </section>
+          </section>
+
+          <section id="supplier-initiated-changes-and-cancellations" class="section level-2">
+            <h3>Supplier-Initiated Changes and Cancellations</h3>
+            <p>Suppliers may cancel, modify, suspend, or delay travel services due to operational decisions, overbooking, property closures, safety concerns, or circumstances beyond our control, including government actions, war, terrorism, labor disputes, public health emergencies, extreme weather, natural disasters, or other force majeure events.</p>
+            <p>In such cases, we will notify you as soon as reasonably possible and assist in exploring available alternatives or refunds strictly in accordance with the applicable Supplier’s policies. We do not guarantee the availability of alternatives or the issuance of refunds.</p>
+          </section>
+
+          <section id="refunds-and-travel-credits" class="section level-2">
+            <h3>Refunds and Travel Credits</h3>
+            <p>Refunds, if any, are governed solely by Supplier policies and are issued only after the Supplier authorizes and remits the refund or otherwise confirms eligibility. We do not guarantee cash refunds.</p>
+            <p>Any refunds processed by us will reflect the amounts authorized by the Supplier, less any applicable administrative fees described in this Section.</p>
+            <p>Refunds will be issued by electronic transfer or check and will be processed within thirty (30) business days after the later of (a) Supplier authorization or (b) our receipt of refunded funds or confirmation of refundable amounts from the Supplier.</p>
+            <p>Some Suppliers issue travel credits instead of refunds to the original form of payment. Any such credits passed through by us will reflect the Supplier’s terms, restrictions, and expiration dates. We do not guarantee the transferability, usability, or future availability of travel credits.</p>
+          </section>
+
+          <section id="travel-insurance-strongly-recommended" class="section level-2">
+            <h3>Travel Insurance Strongly Recommended</h3>
+            <p>You acknowledge that changes, cancellations, or disruptions may result in partial services, delayed travel, increased costs, or loss of prepaid amounts. Travel insurance is strongly recommended to protect against unforeseen events.</p>
+          </section>
+        </section>
+
+        <section id="california-consumer-disclosures" class="section level-1">
+          <h2>CALIFORNIA CONSUMER DISCLOSURES</h2>
+
+          <section id="california-seller-of-travel" class="section level-2">
+            <h3>California Seller of Travel</h3>
+            <p>Volemos Travel LLC is a registered Seller of Travel in the State of California, CST 2159503-40. California law requires certain sellers of travel to have a trust account or bond. Volemos has a trust account. Volemos participates in the California Travel Consumer Restitution Fund (TCRF).</p>
+          </section>
+
+          <section id="right-to-prompt-refund-in-the-event-of-a-cancellation" class="section level-2">
+            <h3>Right to prompt refund in the event of a cancellation</h3>
+            <p>Upon cancellation of the transportation or travel services, where the passenger is not at fault and has not canceled in violation of any terms and conditions previously clearly and conspicuously disclosed and agreed to by the passenger, all sums paid to the seller of travel for services not provided will be promptly reimbursed to the passenger unless the passenger otherwise advises the seller of travel in writing after cancellation. This provision does not apply where the seller of travel has remitted the payment from the customer to another registered wholesale seller of travel or a carrier, without obtaining a refund, and such other provider fails to provide the agreed-upon transportation or service. In this situation, the initial seller of travel must provide the passenger with a written statement accompanied by bank records establishing the disbursement of the customer payment, and if disbursed to a registered wholesaler of travel, proof of current registration of that wholesaler.</p>
+          </section>
+
+          <section id="california-travel-consumer-restitution-fund-tcrf" class="section level-2">
+            <h3>California Travel Consumer Restitution Fund (TCRF)</h3>
+            <p>This transaction is covered by the California Travel Consumer Restitution Fund (TCRF) if the seller of travel was registered and participating in the TCRF at the time of sale AND the passenger is located in California at the time of payment. Eligible passengers may file a claim with TCRF if the passenger is owed a refund of more than $50 for transportation or travel services which the seller of travel failed to forward to a proper provider or such money was not refunded to you when required. The maximum amount which may be paid by the TCRF to any one passenger is the total amount paid on behalf of the passenger to the seller of travel, not to exceed $15,000. A claim must be submitted to the TCRF within 12 months of the scheduled completion date of the trip. A claim must include sufficient documentation to prove your claim and a $35 processing fee. Claimants must agree to waive their right to other civil remedies against a registered participating seller of travel for matters arising out of a sale for which you file a TCRF claim. You may request a claim form by writing to: Travel Consumer Restitution Corporation; 468 Manzanita Ave., Suite 1, Chico, CA 95926; or by visiting TCRC’s website at: www.tcrcinfo.org.</p>
+          </section>
+        </section>
+
+        <section id="user-conduct" class="section level-1">
+          <h2>USER CONDUCT</h2>
+          <p>You agree to use our services lawfully and in compliance with all applicable laws and regulations. You may not engage in fraudulent, deceptive, harmful, or abusive conduct; misrepresent your identity or affiliation; infringe the rights of others; or interfere with the operation, security, or integrity of our services.</p>
+        </section>
+
+        <section id="intellectual-property" class="section level-1">
+          <h2>INTELLECTUAL PROPERTY</h2>
+          <p>All content and intellectual property associated with our services—including website content, service marks, logos, itineraries, promotional materials, and proprietary systems or processes—are owned by Volemos Travel LLC or used with permission.</p>
+          <p>Nothing in these Terms grants you any right, title, or license to our intellectual property. Any unauthorized use may result in legal action.</p>
+        </section>
+
+        <section id="dispute-resolution-and-limitation-of-liability" class="section level-1">
+          <h2>DISPUTE RESOLUTION AND LIMITATION OF LIABILITY</h2>
+          <p>These Terms are governed by the laws of the State of California, without regard to conflict-of-law principles.</p>
+          <p>Any dispute arising out of or relating to these Terms or your use of our services shall be resolved through binding arbitration, administered by the American Arbitration Association (AAA) or the National Conflict Resolution Center (NCRC), and conducted in San Diego County, California. If arbitration is unavailable or prohibited by law, either party may pursue available remedies in small claims court or another court of competent jurisdiction.</p>
+          <p>You and we waive any right to participate in a class, collective, or representative action. All claims must be brought on an individual basis.</p>
+          <p>To the fullest extent permitted by law, our total liability for any claim is limited to the amount you paid for the specific service giving rise to the claim. We are not liable for any indirect, incidental, special, consequential, or punitive damages.</p>
+        </section>
+
+        <section id="indemnification" class="section level-1">
+          <h2>INDEMNIFICATION</h2>
+          <p>You agree to indemnify, defend, and hold harmless Volemos Travel LLC, and its officers, employees, agents, and representatives, from any claims, losses, damages, liabilities, or expenses (including reasonable attorneys’ fees) arising out of your use of our services, violation of these Terms, or infringement of any third-party rights.</p>
+        </section>
+
+        <section id="updates-and-modifications" class="section level-1">
+          <h2>UPDATES AND MODIFICATIONS</h2>
+          <p>We may update these Terms from time to time. Updated Terms become effective upon posting, electronic delivery, or other written notice. Your continued use of our services after the effective date constitutes acceptance of the revised Terms.</p>
+        </section>
+
+        <section id="no-third-party-beneficiaries" class="section level-1">
+          <h2>NO THIRD-PARTY BENEFICIARIES</h2>
+          <p>These Terms are for the benefit of you and Volemos Travel LLC only and do not create any rights for any third party.</p>
+        </section>
+
+        <section id="waiver" class="section level-1">
+          <h2>WAIVER</h2>
+          <p>Our failure to enforce any provision of these Terms does not waive our right to enforce that provision or any other provision at a later time.</p>
+        </section>
+
+        <section id="entire-agreement" class="section level-1">
+          <h2>ENTIRE AGREEMENT</h2>
+          <p>These Terms, together with any additional written agreements or notices we provide, constitute the entire agreement between you and us and supersede all prior or contemporaneous communications, whether oral or written.</p>
+        </section>
+
+        <section id="severability" class="section level-1">
+          <h2>SEVERABILITY</h2>
+          <p>If any provision of these Terms is held invalid or unenforceable, that provision will be modified or severed to the minimum extent necessary, and the remaining provisions will remain in full force and effect.</p>
+        </section>
+
+        <section id="contact-information" class="section level-1">
+          <h2>CONTACT INFORMATION</h2>
+          <p>Questions regarding these Terms may be sent to terms@volemostravel.com.</p>
+        </section>
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2024–2026 Volemos Travel LLC</div>
+      <div><a href="#top">Back to top</a></div>
+    </div>
+  </footer>
+</body>
+</html>
