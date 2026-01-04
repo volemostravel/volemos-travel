@@ -147,6 +147,13 @@
 
     .btn:hover { background: rgba(127,127,127,0.16); }
 
+    .translate-note {
+      margin: 10px 0 0 0;
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
     /* =========================
        TABLE OF CONTENTS
        ========================= */
@@ -211,7 +218,6 @@
       margin: 22px 0 10px 0;
       font-size: 1.35rem;
     }
-
     article.prose h2::before { content: counter(h2) ". "; }
 
     article.prose h3 {
@@ -220,7 +226,6 @@
       margin: 18px 0 8px 0;
       font-size: 1.15rem;
     }
-
     article.prose h3::before { content: counter(h2) "." counter(h3) " "; }
 
     article.prose h4 {
@@ -228,11 +233,10 @@
       margin: 14px 0 6px 0;
       font-size: 1.02rem;
     }
-
     article.prose h4::before { content: counter(h2) "." counter(h3) "." counter(h4) " "; }
 
     /* =========================
-       BULLET LISTS (RESTORED)
+       BULLET LISTS
        ========================= */
 
     .prose ul, .prose ol {
@@ -240,9 +244,7 @@
       padding: 0;
     }
 
-    .prose li {
-      margin: 6px 0;
-    }
+    .prose li { margin: 6px 0; }
 
     .prose ul li::marker,
     .prose ol li::marker {
@@ -275,7 +277,7 @@
        ========================= */
 
     @media print {
-      nav, .top-actions { display: none !important; }
+      nav, .top-actions, .translate-note { display: none !important; }
       body { background: #fff; color: #000; }
       a { color: #000; text-decoration: none; }
       .layout { display: block; padding: 0; }
@@ -304,7 +306,20 @@
         <button class="btn" id="themeToggle" type="button" aria-label="Toggle dark mode">
           Dark mode
         </button>
+
+        <a class="btn"
+           id="translateEs"
+           href="#"
+           target="_blank"
+           rel="noopener"
+           aria-label="Traducir esta página al español">
+          Español
+        </a>
       </div>
+
+      <p class="translate-note">
+        Nota: La traducción al español se proporciona únicamente como referencia mediante Google Translate.  Pueden existir imprecisiones o diferencias de interpretación.  En caso de conflicto, la versión en inglés es la que prevalece.
+      </p>
     </div>
   </header>
 
@@ -602,30 +617,38 @@
 
   <script>
     (function () {
-      const KEY = "volemos_theme";
-      const btn = document.getElementById("themeToggle");
+      /* Theme toggle (manual override, saved) */
+      const THEME_KEY = "volemos_theme";
+      const themeBtn = document.getElementById("themeToggle");
 
       function applyTheme(theme) {
         if (!theme) {
           document.documentElement.removeAttribute("data-theme");
-          if (btn) btn.textContent = "Dark mode";
+          if (themeBtn) themeBtn.textContent = "Dark mode";
           return;
         }
         document.documentElement.setAttribute("data-theme", theme);
-        if (btn) btn.textContent = (theme === "dark") ? "Light mode" : "Dark mode";
+        if (themeBtn) themeBtn.textContent = (theme === "dark") ? "Light mode" : "Dark mode";
       }
 
-      const saved = localStorage.getItem(KEY);
-      applyTheme(saved);
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      applyTheme(savedTheme);
 
-      if (!btn) return;
+      if (themeBtn) {
+        themeBtn.addEventListener("click", function () {
+          const current = document.documentElement.getAttribute("data-theme");
+          const next = (current === "dark") ? "light" : "dark";
+          localStorage.setItem(THEME_KEY, next);
+          applyTheme(next);
+        });
+      }
 
-      btn.addEventListener("click", function () {
-        const current = document.documentElement.getAttribute("data-theme");
-        const next = (current === "dark") ? "light" : "dark";
-        localStorage.setItem(KEY, next);
-        applyTheme(next);
-      });
+      /* Translate to Spanish (opens Google Translate in a new tab) */
+      const translateBtn = document.getElementById("translateEs");
+      if (translateBtn) {
+        const url = encodeURIComponent(window.location.href);
+        translateBtn.href = "https://translate.google.com/translate?sl=en&tl=es&u=" + url;
+      }
     })();
   </script>
 </body>
