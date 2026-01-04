@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Volemos Travel LLC — Terms of Use" />
   <title>Volemos Travel LLC — Terms of Use</title>
+
   <style>
     :root {
       color-scheme: light dark;
@@ -18,6 +19,7 @@
       --toc: 280px;
       --radius: 14px;
     }
+
     @media (prefers-color-scheme: dark) {
       :root {
         --bg: #0b1220;
@@ -28,7 +30,9 @@
         --link: #7aa7ff;
       }
     }
+
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -36,24 +40,33 @@
       color: var(--fg);
       line-height: 1.6;
     }
+
     a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
+
     header {
       border-bottom: 1px solid var(--border);
       background: linear-gradient(180deg, rgba(127,127,127,0.10), rgba(127,127,127,0.00));
     }
+
     .wrap {
       max-width: var(--max);
       margin: 0 auto;
       padding: 28px 18px;
     }
+
     .title { display: grid; gap: 8px; }
+
     h1 {
       font-size: clamp(1.6rem, 2.6vw, 2.2rem);
       margin: 0;
       letter-spacing: -0.02em;
     }
-    .meta { color: var(--muted); font-size: 0.95rem; }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
 
     .layout {
       max-width: calc(var(--max) + var(--toc));
@@ -63,18 +76,21 @@
       gap: 18px;
       grid-template-columns: 1fr;
     }
+
     @media (min-width: 980px) {
       .layout {
         grid-template-columns: var(--toc) 1fr;
         align-items: start;
       }
     }
+
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 16px;
     }
+
     nav .toc-title {
       display: flex;
       justify-content: space-between;
@@ -82,12 +98,14 @@
       gap: 10px;
       margin-bottom: 10px;
     }
+
     nav .toc-title strong {
       font-size: 0.95rem;
       letter-spacing: 0.02em;
       text-transform: uppercase;
       color: var(--muted);
     }
+
     nav ul {
       list-style: none;
       padding-left: 0;
@@ -95,6 +113,7 @@
       display: grid;
       gap: 6px;
     }
+
     nav li ul {
       margin-top: 6px;
       margin-left: 12px;
@@ -102,11 +121,13 @@
       border-left: 1px solid var(--border);
       gap: 4px;
     }
+
     nav a {
       display: inline-block;
       padding: 6px 8px;
       border-radius: 10px;
     }
+
     nav a:hover {
       background: rgba(127,127,127,0.12);
       text-decoration: none;
@@ -121,6 +142,7 @@
       font-size: 1.35rem;
       letter-spacing: -0.01em;
     }
+
     .prose h3 { margin: 18px 0 8px 0; font-size: 1.15rem; }
     .prose h4 { margin: 14px 0 6px 0; font-size: 1.02rem; }
 
@@ -130,6 +152,7 @@
       gap: 10px;
       margin-top: 14px;
     }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -142,12 +165,50 @@
       cursor: pointer;
       font-size: 0.95rem;
     }
+
     .btn:hover { background: rgba(127,127,127,0.16); }
+
+    /* Word-style numbering + ALL CAPS for headings */
+    article.prose {
+      counter-reset: h2;
+    }
+
+    /* H2 = 1., 2., 3. (ALL CAPS) */
+    article.prose h2 {
+      counter-increment: h2;
+      counter-reset: h3;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+    }
+
+    article.prose h2::before {
+      content: counter(h2) ". ";
+    }
+
+    /* H3 = 1.1, 1.2, ... */
+    article.prose h3 {
+      counter-increment: h3;
+      counter-reset: h4;
+    }
+
+    article.prose h3::before {
+      content: counter(h2) "." counter(h3) " ";
+    }
+
+    /* H4 = 1.1.1, 1.1.2, ... */
+    article.prose h4 {
+      counter-increment: h4;
+    }
+
+    article.prose h4::before {
+      content: counter(h2) "." counter(h3) "." counter(h4) " ";
+    }
 
     footer {
       border-top: 1px solid var(--border);
       margin-top: 22px;
     }
+
     .footer-inner {
       max-width: var(--max);
       margin: 0 auto;
@@ -161,7 +222,7 @@
     }
 
     @media print {
-      nav, .top-actions, { display: none !important; }
+      nav, .top-actions { display: none !important; }
       body { background: #fff; color: #000; }
       a { color: #000; text-decoration: none; }
       .layout { display: block; padding: 0; }
@@ -176,20 +237,18 @@
     <div class="wrap title">
       <h1>Volemos Travel LLC — Terms of Use</h1>
       <div class="meta">Last revised: 03-JAN-2026</div>
-<div class="top-actions" role="group" aria-label="Page actions">
-  <button class="btn" onclick="window.print()" type="button" aria-label="Print this page">Print</button>
-  <a class="btn"
-     href="./Volemos%20Travel%20-%20Terms%20of%20Use.pdf"
-     download
-     aria-label="Download PDF version">
-    Download PDF
-  </a>
-</div>
 
+      <div class="top-actions" role="group" aria-label="Page actions">
+        <button class="btn" onclick="window.print()" type="button" aria-label="Print this page">Print</button>
+        <a class="btn"
+           href="./Volemos%20Travel%20-%20Terms%20of%20Use.pdf"
+           download
+           aria-label="Download PDF version">
+          Download PDF
+        </a>
+      </div>
     </div>
   </header>
-
-  <a id="top" href="#" style="position:absolute;top:0;left:0;opacity:0;">Top</a>
 
   <div class="layout">
     <nav class="card" aria-label="Table of contents">
@@ -198,6 +257,7 @@
         <li><a href="#our-role-and-suppliers">Our Role and Suppliers</a></li>
         <li><a href="#quotes-prices-and-availability">Quotes, Prices, and Availability</a></li>
         <li><a href="#booking-payments-and-deadlines">Booking, Payments, and Deadlines</a></li>
+
         <li><a href="#custom-quote-and-professional-services">Custom Quote AND Professional services</a>
           <ul>
             <li><a href="#changes-to-the-quote">Changes to the Quote</a></li>
@@ -206,12 +266,14 @@
             <li><a href="#no-price-guarantee">No Price Guarantee</a></li>
           </ul>
         </li>
+
         <li><a href="#professional-service-fees">Professional Service Fees</a>
           <ul>
             <li><a href="#flight-only-bookings">Flight-Only Bookings</a></li>
             <li><a href="#travel-packages">Travel Packages</a></li>
           </ul>
         </li>
+
         <li><a href="#changes-cancellations-and-refunds">Changes, Cancellations, and Refunds</a>
           <ul>
             <li><a href="#customer-requested-changes-and-cancellations">Customer-Requested Changes and Cancellations</a></li>
@@ -220,6 +282,7 @@
             <li><a href="#travel-insurance-strongly-recommended">Travel Insurance Strongly Recommended</a></li>
           </ul>
         </li>
+
         <li><a href="#california-consumer-disclosures">CALIFORNIA CONSUMER DISCLOSURES</a>
           <ul>
             <li><a href="#california-seller-of-travel">California Seller of Travel</a></li>
@@ -227,6 +290,7 @@
             <li><a href="#california-travel-consumer-restitution-fund-tcrf">California Travel Consumer Restitution Fund (TCRF)</a></li>
           </ul>
         </li>
+
         <li><a href="#user-conduct">USER CONDUCT</a></li>
         <li><a href="#intellectual-property">INTELLECTUAL PROPERTY</a></li>
         <li><a href="#dispute-resolution-and-limitation-of-liability">DISPUTE RESOLUTION AND LIMITATION OF LIABILITY</a></li>
@@ -463,7 +527,6 @@
   <footer>
     <div class="footer-inner">
       <div>© 2024–2026 Volemos Travel LLC</div>
-      <div><a href="#top">Back to top</a></div>
     </div>
   </footer>
 </body>
